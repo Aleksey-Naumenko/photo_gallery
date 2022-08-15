@@ -1,0 +1,131 @@
+:root {
+  --blackColor: #000;
+  --whiteColor: #fff;
+  --border: 3px solid var(--blackColor);
+  --borderRadius: 15px;
+
+  scrollbar-color: var(--blackColor) #eaeef6;
+  scrollbar-width: 5px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*scrollbars customeizing*/
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #eaeef6;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: var(--blackColor);
+}
+::-webkit-scrollbar-corner {
+  display: none;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: var(--border);
+  background-color: var(--whiteColor);
+  z-index: 100;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main h1 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.main input {
+  border: var(--border);
+  padding: 10px;
+  border-radius: var(--borderRadius);
+  outline: none;
+}
+
+.photosContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.photoCard {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  border: var(--border);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.photoCard__img {
+  max-height: 200px;
+}
+
+.photoCard__title {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 20px;
+}
+
+.photoCard__title > div {
+  height: 100%;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--blackColor);
+  color: var(--whiteColor);
+  padding: 10px 20px;
+  border-radius: var(--borderRadius);
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.loading > svg {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
