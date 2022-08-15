@@ -1,5 +1,4 @@
 {
-  "homepage": "https://Aleksey-Naumenko.github.io/photo_gallery",
   "name": "react-eslint",
   "version": "0.1.0",
   "private": true,
@@ -18,8 +17,6 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "lint": "eslint --ext .ts,.tsx src --fix",
@@ -51,7 +48,6 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.21.5",
-    "gh-pages": "^4.0.0",
     "prettier": "^2.1.2"
   }
 }
